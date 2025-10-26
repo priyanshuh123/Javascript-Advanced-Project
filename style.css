@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #f8f8f8;
+
+background: linear-gradient(to bottom, #f5f3ff 0%, #fdf2f8 60%, transparent 100%);
+
+}
+
+header nav{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    color: black;
+}
+
+header nav h1{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;
+background: linear-gradient(to bottom, #ede9fe, #fdf2f8, transparent);
+
+}
+
+form input[type="text"],button
+[type="submit"]{
+
+    border: none;
+    font-size: 18px;
+     padding: 10px;
+     border-radius: 4px;
+    transition: background-color 0.2
+    ease-in-out;
+
+     
+}    
+
+    form button[type="submit"]
+    {
+         border: none;
+        background-color: #f44336;
+        color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        
+    }
+
+    /* Main Section */
+
+    .recipe-container{
+
+        color: #000;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+        gap: 40px;
+        width: 80%;
+        margin: 10px auto;
+        padding: 20px;
+        place-items: center;
+
+    }
+
+    .recipe{
+        background-color: #fff;
+        color: #000;
+        display: flex;
+       flex-direction: column;
+        border-radius: 6px;
+        box-shadow: 0 5px 10px rgba(78,73, 73, 0.1);
+        cursor: pointer;
+        max-width: 350px;
+        
+    }
+
+    form button[type="submit"]:hover{
+       background-color: #ff5c5c;
+    }
+
+        /* Responsive Code */
+
+@media screen and (max-width:600px){
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe img {
+        height: 300px;
+    }
+
+    .recipe h3 {
+        font-size: 24px;
+        margin-block: 5px;
+    }
+
+    .recipe p {
+        font-size: 20px;
+        color:#4a4a4a;
+        margin: 5px 0;
+    }
+
+    .recipe span {
+        font-weight: 600;
+    }
+
+    .recipe button{
+        font-size: 20px;
+        font-weight: 600;
+         padding: 10px;
+         border-radius: 5px;
+         cursor: pointer;
+         margin: 18px auto;
+         border: none;
+         background-color: #f44336;
+         color: white;
+
+    }
+
+
+        /* Responsive Code */
+
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
