@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+
+  <title>MovieBoxHub</title>
+</head>
+                                  
+<body>
+  <nav class="bg-gradient-to-r from-[#111111] to-[#1b003a] text-white flex justify-between items-center p-4  shadow-xl ">
+    <h1 class="text-2xl font-bold text-red-600 ">MovieBoxHub</h1>
+
+
+    <ul class=" text-xl flex gap-6  ">
+      <a href="#" class="hover:text-red-600">Home</a>
+      <a href="#" class="hover:text-red-600">Movie</a>
+      <a href="#" class="hover:text-red-600">Web Series</a>
+      <a href="#" class="hover:text-red-600">TV Show</a>
+
+    </ul>
+
+    <form
+      class="flex items-center bg-[#1e1e1e] rounded-xl px-4 py-1 w-64 focus-within:ring-2 focus-within:ring-red-600">
+      <input type="text" placeholder="type..." class="bg-transparent text-white placeholder outline-none flex-1" />
+      <button type="submit" class="ml-2 text-white hover:text-red-100 font-semibold transition" id="searchBtn">
+        Search
+      </button>
+    </form>
+
+
+    </form>
+
+
+
+  </nav>
+
+  <main>
+    <div id="movieContainer" class="flex justify-center items-center min-h-screen p-4">
+
+    </div>
+
+
+
+  </main>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

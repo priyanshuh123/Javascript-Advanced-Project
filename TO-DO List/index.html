@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-purple-700 to-pink-700  flex items-center justify-center p-6">
+           
+          <div class="">
+                <div class=" input-container bg-gray-300 w-full p-6 max-w-xl rounded-2xl shadow-2xl">
+                    <!--Header-->
+
+    <header class="flex justify-center items-center mb-4">
+            <div>
+                <h1 class="text-xl font-bold text-gray-900">To-Do List</h1>
+                
+            </div>
+            <div id="dateFromjs"></div>
+    </header>
+      
+    <!--Add Task-->
+    <div class="flex gap-2 mb-4">
+        <input id="taskInput" type="text" placeholder="Add a new task....." aria-label="Task input" 
+        class="flex-1 px-3 py-2 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-300">
+        <button id="addBtn" class="bg-indigo-600 px-4 py-2 rounded-lg text-white font-semibold hover:bg-indigo-700 transition">Add</button>
+    </div>
+
+    <!-- Todo List-->
+
+        <ul id="todoList" class="flex flex-col gap-2"></ul>
+        <p id="empty" class="text-center text-gray-400 mt-4 hidden">No tasks yet — add one above</p>
+
+       <!--Filters-->    
+         
+        <div  class="flex flex-wrap items-center mb-4">
+            <div id="filters" class="flex gap-2">
+                <div class="chip bg-indigo-600 text-white px-3 py-1.5 rounded-full text-sm cursor-pointer"data-filter>All</div>
+                <div class="chip bg-indigo-600 text-white rounded-full px-3 py-1.5 text-sm cursor-pointer">Active</div>
+                <div  class="chip bg-indigo-600 text-white px-3 py-1.5 rounded-full text-sm cursor-pointer"data-filter>Completed</div>
+            </div>
+            <p id="remainingCount" class=" p-4 ml-auto text-sm text-gray-500">0 items left</p>
+            <button id="clearCompleted" class="  text-sm bg-gray-300 text-gray-600 px-3 py-1.5 rounded-full hover:bg-red-100 hover:text-red-600 transition">Clear Completed</button>
+        </div>
+    
+   <!--Footer-->
+                  
+                    <footer class="flex justify-center items-center text-sm text-gray-700 mt-4 gap-27">
+                        <p id="summary">0 task . 0 Completed</p>
+                        <p>saved locally in your browser</p>
+        
+                    </footer> 
+
+                    <!--<div id="output" class=" hidden  flex-1 px-3 py-2  text-sm p-2 mt-4 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-300" ></div> -->
+                    
+                           
+                    <div id="output" class="flex flex-col gap-2 "></div>
+
+    </div>
+     
+                
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

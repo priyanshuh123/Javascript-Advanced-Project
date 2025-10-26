@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📰 Global News Portal</title>
+  
+  <!-- ✅ Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background-color: #f8fafc;
+    }
+
+    .news-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-900">
+
+  <!-- 🌐 Header -->
+  <header class="bg-blue-700 text-white shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-bold tracking-wide">📰 Global News</h1>
+      <div class="flex items-center gap-3">
+        <label for="Country" class="text-sm font-medium">Select Country:</label>
+        <select id="country" class="p-2 rounded text-black outline-none focus:ring-2 focus:ring-blue-400">
+          <option value="in">India</option>
+          <option value="us">USA</option>
+          <option value="gb">UK</option>
+          <option value="au">Australia</option>
+          <option value="ca">Canada</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- News Section -->
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <h2 class="text-2xl font-semibold mb-6 text-gray-800 border-b pb-2">Top Headlines</h2>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="news-container">
+      <!-- News cards will be injected here -->
+    </div>
+  </main>
+
+  <!--Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-4 mt-10">
+    <p>© 2025 Global News Portal. Powered by GNews API.</p>
+  </footer>
+
+  <!--Script -->
+  <script src="script.js"></script>
+</body>
+</html>
