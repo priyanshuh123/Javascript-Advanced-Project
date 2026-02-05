@@ -2,21 +2,21 @@
 const container = document.querySelector(".container")
 const btn = document.querySelector("#btn")
 
-const getUserdata = async (username) =>{
+const getUserdata = async (username) => {
 
-try{
+    try {
 
-             const response = await fetch(`https://api.github.com/users/${username}`)
+        const response = await fetch(`https://api.github.com/users/${username}`)
 
-          const data = await response.json();
-          console.log(data)
+        const data = await response.json();
+        console.log(data)
 
 
-            
-                   const cardDiv = document.createElement('div')
-                       cardDiv.classList.add('card')
 
-               cardDiv.innerHTML = `
+        const cardDiv = document.createElement('div')
+        cardDiv.classList.add('card')
+
+        cardDiv.innerHTML = `
 
 
                              <div class="flex-col justify-center items-center">
@@ -33,19 +33,15 @@ try{
                               </div>
                               </div>
 
-
-                              
-
-               
                `
+               
+        container.appendChild(cardDiv)
 
-               container.appendChild(cardDiv)
 
+    } catch (error) {
 
-}catch(error){
-           
-           console.log(error)
-}   
+        console.log(error)
+    }
 
 }
 
